@@ -1,0 +1,74 @@
+/* .margin-remove{
+    margin-bottom: -20px;
+} */
+
+.card{
+    border: none !important;
+    cursor: pointer;
+}
+
+.card-img-top{
+    border-radius: 0px !important;
+}
+.search-container {
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+
+.search-container h2 {
+	margin-bottom: 20px;
+}
+
+
+.input-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 20px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+	
+}
+
+.input-container input[type="text"] {
+	width: 100%;
+	padding: 10px;
+	border-radius: 20px;
+	border: none;
+	outline: none;
+}
+
+#searchbtn {
+	padding: 10px 20px;
+	background: linear-gradient(to right, #eee, #fff);
+	border: none;
+	border-radius: 20px;
+	margin-left: 20px;
+	transition: all 0.2s ease;
+}
+
+#searchbtn:hover {
+	transform: scale(1.1);
+}
+.refreshbtn {
+	background-color: palevioletred; /* Blue background */
+	border: red; /* Remove borders */
+	border-radius: 25px;
+	color: white; /* White text */
+	padding: 12px 16px; /* Some padding */
+	font-size: 16px; /* Set a font size */
+	cursor: pointer; /* Mouse pointer on hover */
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+	
+  }
+  
+  /* Darker background on mouse-over */
+  .refreshbtn:hover {
+	background-color: teal;
+  }
+ 
+ 
