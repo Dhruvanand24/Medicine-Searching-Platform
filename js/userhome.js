@@ -157,6 +157,7 @@ const setPrescription = () => {
                             userid: user.uid,
                             city: cityName,
                         })
+                        showRestaurants();
                     }
                 })
                 
