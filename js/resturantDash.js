@@ -26,6 +26,10 @@ const showItem = () => {
             else {console.log("working");
                 querySnapshot.forEach((pres) => {
                     if (pres.data().city == rescity) {
+                        var docRef = db.collection('users').doc(pres.data().userid);
+
+                        docRef.get().then((doc) => {
+                            if (doc.exists) {
                         html += `<div class="col-lg-3 col-md-4 col-sm-6 pt-4 d-flex justify-content-center">
                     <div class="card" style="width: 17rem; height: 30 !important; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);">
                     
@@ -33,6 +37,7 @@ const showItem = () => {
                                 <p class="" style="font-size: 25px;"><b>${pres.data().data}</b></p>
                             <div class="d-flex justify-content-between">
                                 <p class="" style="font-size: 16px;">${pres.data().city}</p>
+                                <p class="" style="font-size: 16px;"><i>${doc.data().name}</i></p>
                             </div>
                             <a href="#" style = "display: inline-block;
                             padding: 5px 10px;
@@ -49,6 +54,13 @@ const showItem = () => {
 
                         prescription.innerHTML = html;
                         loader.style.display = "none";
+                                } else {
+                                // doc.data() will be undefined in this case
+                                console.log("No such document!");
+                            }
+                        }).catch((error) => {
+                            console.log("Error getting document:", error);
+                        });
                     }
 
                 });
