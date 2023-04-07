@@ -73,21 +73,20 @@ const showItem = () => {
                 querySnapshot.forEach((pres) => {
                     if (pres.data().city == rescity) {
                         html += `<div class="col-lg-3 col-md-4 col-sm-6 pt-4 d-flex justify-content-center">
-                    <div class="card" style="width: 17rem; height: 30 !important;">
-                        <div class="dropdown">
-                                <i class="bi bi-three-dots-vertical dropbtn three-dot"></i>
-                            <div class="dropdown-content">
-                                <a href="#" onclick="editItem(${pres.data})">Edit</a>
-                                <a href="#" onclick="deleteItem(${pres.data}, '${pres.data().data}')">Delete</a>
-                            </div>
-                        </div>
+                    <div class="card" style="width: 17rem; height: 30 !important; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);">
                     
                         <div class="card-body">
                                 <p class="" style="font-size: 25px;"><b>${pres.data().data}</b></p>
                             <div class="d-flex justify-content-between">
-                                <p class="" style="font-size: 16px;">Cityname: ${pres.data().city}</p>
+                                <p class="" style="font-size: 16px;">${pres.data().city}</p>
                             </div>
-                            <a href="#" onclick="accept('${pres.id}')">Accept</a>
+                            <a href="#" style = "display: inline-block;
+                            padding: 5px 10px;
+                            background-color: thistle;
+                            color: white;
+                            text-decoration: none;
+                            border-radius: 5px;
+                            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);"  onmouseover="this.style.color='black';" onmouseout="this.style.color='white';" onclick="accept('${pres.id}')">Accept</a>
                             
                             
                         </div>

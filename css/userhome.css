@@ -3,13 +3,11 @@
 } */
 
 .card{
-    border: none !important;
+    
     cursor: pointer;
+	background: red;
 }
 
-.card-img-top{
-    border-radius: 0px !important;
-}
 .search-container {
 	margin-top: 50px;
 	display: flex;
@@ -70,5 +68,13 @@
   .refreshbtn:hover {
 	background-color: teal;
   }
- 
+  .btn {
+	background-color: blue;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+  }
  
