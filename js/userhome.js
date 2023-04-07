@@ -62,7 +62,7 @@ const showshops = (id) => {
                 console.log("entered if of doc.exists");
                 const myArray = doc.data().shopkeepers;
                 console.log(myArray);
-                if (!myArray) {
+                if (myArray.length<1) {
                     console.log("entered comparison if");
                     alert("Shops have not responded yet! wait for some time");
                     showRestaurants();
