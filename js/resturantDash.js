@@ -30,6 +30,10 @@ const showItem = () => {
 
                         docRef.get().then((doc) => {
                             if (doc.exists) {
+                                marray = pres.data().shopkeepers;
+                                console.log(marray);
+                                const check = marray.includes(res.uid);
+                                if(!check){
                         html += `<div class="col-lg-3 col-md-4 col-sm-6 pt-4 d-flex justify-content-center">
                     <div class="card" style="width: 17rem; height: 30 !important; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);">
                     
@@ -54,6 +58,7 @@ const showItem = () => {
 
                         prescription.innerHTML = html;
                         loader.style.display = "none";
+                                }
                                 } else {
                                 // doc.data() will be undefined in this case
                                 console.log("No such document!");
