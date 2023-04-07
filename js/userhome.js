@@ -147,12 +147,21 @@ const setPrescription = () => {
             const cityName = doc.data().city;
             console.log(cityName);
             if (data != "") {
-                db.collection('prescriptions').add({
-                    data: data,
-                    userid: user.uid,
-                    city: cityName,
+                const query = db.collection('prescriptions').where('data', '==', data).where('userid', '==', user.uid);
+                query.get().then((querySnapshot)=>{
+                    if(!querySnapshot.empty){
+                        alert("You have already searched for this medicine, remove it if you want to search again!!");
+                    }else{
+                        db.collection('prescriptions').add({
+                            data: data,
+                            userid: user.uid,
+                            city: cityName,
+                        })
+                    }
                 })
+                
             }
+            
         } else { console.log("No such document!"); }
     }).catch((error) => { console.log("Error getting document:", error); alert(error) });
 
