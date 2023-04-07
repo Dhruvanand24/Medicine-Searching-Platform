@@ -1,51 +1,5 @@
 
 
-// const auth = firebaseApp.auth();
-// const db = firebaseApp.firestore();
-
-// auth.onAuthStateChanged((user) => {
-//     if (user) {
-//         console.log(user);
-//         // console.log(user.uid);
-//     } else {
-//         console.log("User Logged Out");
-//     }
-// });
-//----------------------------------------------------------------------------------------------------------------------------------------------------------
-// const addItem = () => {
-//     loader.style.display = "block"
-//     // Storage
-//     //const ref = storage.ref('resturantItems');
-//     //let file = document.getElementById('resFoodImage').files[0];
-//     //let date = new Date;
-//     //let name = date.getTime() + '-' + file.name
-
-//     //const metadata = { contentType: file.type }
-//     //const task = ref.child(name).put(file, metadata);
-
-//     task.then(snapshot => snapshot.ref.getDownloadURL())
-//         .then(url => {
-//             let prescriptionName = document.getElementById('prescriptionName').value; resPrice = document.getElementById('resPrice').value; resCatrgory = document.getElementById('resCatrgory').value;
-//             let genID = date.getTime();
-//             auth.onAuthStateChanged((res) => {
-//                 db.collection("items").doc(`${genID}`).set({
-//                     itemname: prescriptionName, itemprice: resPrice, itemcategory: resCatrgory, key: res.uid, imageurl: url, imagename: name,
-//                 })
-//                     .then(() => {
-//                         console.log("Document successfully written!");
-//                         showItem();
-//                         loader.style.display = "none"
-//                     })
-//                     .catch((error) => {
-//                         console.error("Error writing document: ", error);
-//                         alert(error);
-//                         loader.style.display = "none"
-//                     });
-//             })
-//         })
-//         .catch((err) => { alert(err); })
-// }
-
 const showItem = () => {
     loader.style.display = "block"
     let prescription = document.getElementById('prescription');
@@ -151,38 +105,9 @@ const accept = (id) => {
             } else { console.log("No such document!"); }
         }).catch((error) => { console.log("Error getting document:", error); alert(error) });
     })
-    alert("function");
+    alert("Accepted!");
     console.log(id);
     
 
 }
 
-// const editItem = (id) => {
-//     console.log(id);
-//     // var editItem = db.collection("orders").doc(`${id}`);
-
-//     // // Set the "capital" field of the city 'DC'
-//     // return washingtonRef.update({
-//     //     capital: true
-//     // })
-//     //     .then(() => {
-//     //         console.log("Document successfully updated!");
-//     //     })
-//     //     .catch((error) => {
-//     //         // The document probably doesn't exist.
-//     //         console.error("Error updating document: ", error);
-//     //     });
-// }
-
-//? for show and hide input in onchange
-// const freeOrpaid = () => {
-//     let resDeliveryType = document.getElementById('resDeliveryType').value, delvcharginp = document.getElementById('delvcharginp'), delvcharlab = document.getElementById('delvcharlab');
-
-//     if (resDeliveryType == "Paid") {
-//         delvcharginp.style.display = "block"
-//         delvcharlab.style.display = "block"
-//     } else {
-//         delvcharginp.style.display = "none"
-//         delvcharlab.style.display = "none"
-//     }
-// }
