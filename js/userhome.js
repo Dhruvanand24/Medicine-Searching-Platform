@@ -12,7 +12,7 @@ const showRestaurants = () => {
                     allRestaurant += `<div class="col-lg-3 col-md-4 col-sm-6 pt-4 d-flex justify-content-center">
                     <div class="card" style="width: 17rem; height: 30 !important; border-radius: 10px;  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);">
                     <div class="card-body" style = "color: black;">
-                            <p class="" style="font-size: 25px;"><b>${doc.data().data}</b></p>
+                            <p class="" style="font-size: 25px;"><b>${doc.data().data[0].toUpperCase+doc.data().data.slice(1)}</b></p>
 
                         <a href="#" style= "margin-right: 10px; display: inline-block;
                         padding: 5px 10px;
@@ -153,7 +153,7 @@ const setPrescription = () => {
                         alert("You have already searched for this medicine, remove it if you want to search again!!");
                     }else{
                         db.collection('prescriptions').add({
-                            data: data,
+                            data: data.toLowerCase(),
                             userid: user.uid,
                             city: cityName,
                             shopkeepers: [],
