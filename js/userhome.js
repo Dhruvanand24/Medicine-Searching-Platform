@@ -140,7 +140,7 @@ const setPrescription = () => {
     console.log("click")
     const user = auth.currentUser;
     console.log(user.uid);
-    let data = document.getElementById('data').value;
+    let data = document.getElementById('data').value.toLowerCase();
     data.toLowerCase();
     let docRef = db.collection("users").doc(user.uid);
     docRef.get().then((doc) => {
