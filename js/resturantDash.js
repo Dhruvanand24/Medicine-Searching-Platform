@@ -38,7 +38,7 @@ const showItem = () => {
                     <div class="card" style="width: 17rem; height: 30 !important; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);">
                     
                         <div class="card-body">
-                                <p class="" style="font-size: 25px;"><b>${pres.data().data}</b></p>
+                                <p class="" style="font-size: 25px;"><b>${pres.data().data[0].toUpperCase()+pres.data().data.slice(1)}</b></p>
                             <div class="d-flex justify-content-between">
                                 <p class="" style="font-size: 16px;">${pres.data().city}</p>
                                 <p class="" style="font-size: 16px;"><i>${doc.data().name}</i></p>
