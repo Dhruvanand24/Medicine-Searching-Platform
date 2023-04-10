@@ -84,7 +84,7 @@ const showshops = (id) => {
                                         
                                     </div>
                                     <div style = "border: 1px solid black; background-color: thistle; border-radius: 8px; border-top: none; border-top-left-radius: 0px; border-top-right-radius: 0px;"> <p class="card-text" style="font-size: 16px;"><i>Address: ${pot.data().address}</i></p> </div>
-                                    
+                                    <div style = "border: 1px solid black; background-color: thistle; border-radius: 8px; border-top: none; border-top-left-radius: 0px; border-top-right-radius: 0px;"> <p class="card-text" style="font-size: 16px;"><i>Contact: ${pot.data().phonenumber}</i></p> </div>
                                 </div>
                                 
                             </div>
