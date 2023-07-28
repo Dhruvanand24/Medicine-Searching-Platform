@@ -1,11 +1,11 @@
 const firebaseApp = firebase.initializeApp({
-  apiKey: "AIzaSyCe1xPx7RZsEbx2s2gRnaQA4LXjO3yd9ms",
-  authDomain: "medicine-searching-website.firebaseapp.com",
-  projectId: "medicine-searching-website",
-  storageBucket: "medicine-searching-website.appspot.com",
-  messagingSenderId: "442559539926",
-  appId: "1:442559539926:web:ea576958ab0fcb3dccf777",
-  measurementId: "G-KEZYRZC220"
+apiKey: "AIzaSyDjJytwUaxnNgZeDDe8CQxznEzOM4vlJd4",
+    authDomain: "medicineproject-98839.firebaseapp.com",
+    projectId: "medicineproject-98839",
+    storageBucket: "medicineproject-98839.appspot.com",
+    messagingSenderId: "461542684340",
+    appId: "1:461542684340:web:de2fcc9e4fc9fc272149e1",
+    measurementId: "G-H4C36LMV7Q"
 });
 
 const auth = firebaseApp.auth();
